@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+// Contains the Schema of the Product DB.
 const Product = require('../nodejs-mongo-crud/models/projectModel')
 const mongoose = require('mongoose')
 
@@ -53,7 +54,7 @@ app.get('/products/:id', async (req, res) => {
 
 
 // PUT API
-// Update Api
+// How to Update Data
 app.put('/products/:id', async(req, res)=>{
     try {
         const {id} = req.params;
@@ -70,6 +71,9 @@ app.put('/products/:id', async(req, res)=>{
     }
 })
 
+
+// DELETE API
+// How to Delete a data
 app.delete('/products/:id', async(req, res)=>{
     try {
         const {id} = req.params;
